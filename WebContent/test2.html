@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel="stylesheet" href="jquery/jquery.mobile-1.4.2.min.css">
+<script src="jquery/jquery.1.10.2.js"></script>
+<script src="jquery/jquery.mobile-1.4.2.min.js"></script>
+<script>
+    
+    $(document).ready(function() {
+                      $("#searchBtn").click(function() {
+                                            setTimeout(function() {
+                                                       $("#inputData").focus();
+                                                       }, 0);
+                                            });
+                      });
+                      
+</script>
+<title>IndieON</title>
+<style>
+* {
+	text-shadow: none !important;
+}
+</style>
+</head>
+<body>
+	<div data-role="page" id="pageone">
+		<div data-role="panel" id="menuPanel" data-position-fixed="true">
+			<h2>IndieON</h2>
+			<ul data-role="listview">
+				<li><a href="#">뮤지션</a></li>
+				<li><a href="#">공간</a></li>
+				<li><a href="#">공연</a></li>
+			</ul>
+		</div>
+
+		<div data-role="header">
+			<a href="#menuPanel"
+				class="ui-btn ui-icon-bars ui-btn-icon-notext ui-btn-inline ui-corner-all ui-shadow">
+				Search </a>
+			<h1>IndieON</h1>
+
+			<div data-role="panel" id="searchPanel" data-display="overlay"
+				data-position="right" data-position-fixed="true">
+				<form method="get" action="#">
+					<input type="search" id="inputData" name="inputData" />
+				</form>
+			</div>
+			<a href="#searchPanel" id="searchBtn"
+				class="ui-btn ui-icon-search ui-btn-icon-notext ui-btn-inline ui-corner-all ui-shadow">
+				Search </a>
+		</div>
+
+		<div data-role="main" class="ui-content">
+			<div class="ui-content"
+				style="height: auto; background-image: url('img1.jpg'); background-size: cover; padding-top: 0; padding-left: 0; padding-right: 0;">
+				<div
+					style="display: inline-block; background-color: rgba(0, 0, 0, 0.3); width: 100%;">
+					<div style="position: relative">
+						<span
+							style="color: white; font-size: 250%; font-weight: 100; vertical-align: text-top;">감성달빛</span><span
+							style="color: white; font-weight: 100; font-size: 80%;">카페
+							/ 공연장 / 어쿠스틱</span>
+						<div>
+							<span style="color: rgb(160, 160, 160); font-weight: 100">서울
+								성북구 보문로 30가길 27-2</span>
+						</div>
+					</div>
+
+					<div style="text-align: right; position: relative; top: -40px;">
+						<span align="right" style="color: white; font-weight: 100;%">매주
+							화요일</span>
+					</div>
+				</div>
+				<br /> <br /> <br /> <br /> <br />
+
+				<div 
+					style=" position : relative ; right : 1em; float : right ;display: inline-block; background-color: rgba(255,255,255,0.8); text-align: center;">
+					<p align="left" style="margin-bottom: 0px; margin-top: 5px;">관심공간</p>
+					<img align="center" src="image/plus.png" alt="plus"
+						style="width: 30px; padding-bottom: 5px" />
+				</div>
+			</div>
+
+		</div>
+
+		<div data-role="main" class="ui-content">
+			<div class="ui-content"
+				style="height: auto; background-image: url('img1.jpg'); background-size: 100% 100%; padding-top: 0; padding-left: 0; padding-right: 0;">
+				<div
+					style="display: inline-block; background-color: rgba(0, 0, 0, 0.3); width: 100%;">
+					<div style="position: relative">
+						<span
+							style="color: white; font-size: 250%; font-weight: 100; vertical-align: text-top;">감성달빛</span>
+						<span style="color: white; font-weight: 100; font-size: 80%;">카페
+							/ 공연장 / 어쿠스틱</span>
+						<div>
+							<span style="color: rgb(160, 160, 160); font-weight: 100">서울
+								성북구 보문로 30가길 27-2</span>
+						</div>
+					</div>
+
+					<div style="text-align: right; position: relative; top: -40px;">
+						<span align="right" style="color: white; font-weight: 100;%">매주
+							화요일</span>
+					</div>
+				</div>
+				<br /> <br /> <br /> <br /> <br />
+
+
+				<div 
+					style=" position : relative ; right : 1em; float : right ;display: inline-block; background-color: rgba(255,255,255,0.8); text-align: center;">
+					<p align="left" style="margin-bottom: 0px; margin-top: 5px;">관심공간</p>
+					<img align="center" src="image/plus.png" alt="plus"
+						style="width: 30px; padding-bottom: 5px" />
+				</div>
+			</div>
+
+		</div>
+
+		<div data-role="main" class="ui-content">
+			<div class="ui-content"
+				style="height: auto; background-image: url('img1.jpg'); background-size: 100% 100%; padding-top: 0; padding-left: 0; padding-right: 0;">
+				<div
+					style="display: inline-block; background-color: rgba(0, 0, 0, 0.3); width: 100%;">
+					<div style="position: relative">
+						<span
+							style="color: white; font-size: 250%; font-weight: 100; vertical-align: text-top;">감성달빛</span><span
+							style="color: white; font-weight: 100; font-size: 80%">카페
+							/ 공연장 / 어쿠스틱</span>
+						<div>
+							<span style="color: rgb(160, 160, 160); font-weight: 100">서울
+								성북구 보문로 30가길 27-2</span>
+						</div>
+					</div>
+
+					<div style="text-align: right; position: relative; top: -40px;">
+						<span align="right" style="color: white; font-weight: 100;%">매주
+							화요일</span>
+					</div>
+				</div>
+				<br /> <br /> <br /> <br /> <br />
+
+				<div 
+					style=" position : relative ; right : 1em; float : right ;display: inline-block; background-color: rgba(255,255,255,0.8); text-align: center;">
+					<p align="left" style="margin-bottom: 0px; margin-top: 5px;">관심공간</p>
+					<img align="center" src="image/plus.png" alt="plus"
+						style="width: 30px; padding-bottom: 5px" />
+				</div>
+			</div>
+
+		</div>
+
+		<a href="#" class="ui-btn ui-btn-inline"> <img src="home.png"
+			z-index="1" />홈으로
+		</a>
+
+		<div data-role="footer">
+			<h1>Page Footer</h1>
+		</div>
+	</div>
+</body>
+</html>
