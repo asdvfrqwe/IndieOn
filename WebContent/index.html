@@ -4,16 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- 
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
-<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
- -->
-
 <link rel="stylesheet" href="jquery/jquery.mobile-1.4.2.min.css">
 <script src="jquery/jquery.js"></script>
 <script src="jquery/jquery-1.10.2.min.js"></script>
 <script src="jquery/jquery.mobile-1.4.2.min.js"></script>
+<script src="https://w.soundcloud.com/player/api.js"></script>
 
 <script>		
 
@@ -136,6 +131,19 @@
 		width: 10%;
 	}
 	
+	iframe {		
+		-moz-transform: scale(0.8, 0.8) translateX(-44px);
+		-webkit-transform: scale(0.8, 0.8) translateX(-44px);
+		-o-transform: scale(0.8, 0.8) translateX(-44px);
+		-ms-transform: scale(0.8, 0.8) translateX(-44px);
+		transform: scale(0.8, 0.8) translateX(-44px);
+		
+		border: 0px;
+	}
+
+	.tdImg{
+		width: 127px;
+	}
 </style>
 </head>
 <body>
@@ -185,11 +193,7 @@
                         <p style="text-align: center; color: gray; font-size: 65%;">클럽 빵, 제이노바, 카페 언플러그드, 사운드마인드</p>
                         <div class="ui-grid-b">
                             <div class="ui-block-a">
-                                <!-- 
-                                <a href="#" class="ui-shadow ui-btn ui-corner-all">
-                                	<img align="left" src="image/heart-black.png" style="width : 10%">팔로우하기
-                                </a> 
-                                -->
+                               
                                 <div class="button-wrap">
                                     <button class="ui-shadow ui-btn ui-corner-all">
                                     	<img align="left" src="image/heart-black.png">팔로우
@@ -213,36 +217,41 @@
 							<!--
 							Soundcloud widget
 							!-->
-							
-							<center>
-							<table width=100%> 
-							<tr height=300> 
-							<td width=22%><img src = "image/title.jpg" style="transform: scale(1.1,0.9);" scalemode="noscale" scrolling = "no" height="110" width=100% align="right"></iframe></td><td width=78%><iframe width="100%" height="110"  style="transform: scale(1,0.8);"scrolling="no" frameborder="no"  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123525311&amp;
-								auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=true&amp;
-								show_reposts=false&amp;visual=false&amp;show_artwork=false"></iframe>
-							</td> 
-							</tr> 
+					
+							<table  > 
+								<tr> 
+									<td>
+										<img class="tdImg" src="image/title.jpg">
+									</td>
+									<td>
+										<iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123525311&show_artwork=false"></iframe>
+									</td>
+								<tr> 
 							</table>
-							</center>
-							
-						
+			
                         </div>
                     </div>
                 </div>
             </div> 
-			<center>
 			<img class="ui-grid-b" src="image/image2.png" alt="image" /> 
 			<img class="ui-grid-b" src="image/image3.png" alt="image" /> 
 		</div>
 		
-		<!-- 
-		<a href="#" class="ui-btn ui-btn-inline">
-			<img src="image/home.png" z-index="1"/>홈으로
-		</a>
-		 -->
+		
 		<div data-role="footer">
 			<h1>Page Footer</h1>
 		</div>
 	</div>
+	<script type="text/javascript">
+		(function() {
+			var widgetIframe = document.getElementById('sc-widget');
+			var widget = SC.Widget(widgetIframe);
+
+			widget.bind(SC.Widget.Events.READY, function() {				
+				// set new volume level
+				widget.setVolume(50);
+			});
+		}());
+	</script>
 </body>
 </html>
